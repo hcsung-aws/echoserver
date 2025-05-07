@@ -1,0 +1,16 @@
+schemaVersion: 2.0.0
+metadata:
+  name: cpp-echo-server
+components:
+  - name: dev
+    container:
+      image: public.ecr.aws/aws-mde/universal-image:latest
+commands:
+  - id: build
+    exec:
+      component: dev
+      commandLine: "cd linux && mkdir -p build && cd build && cmake .. && make"
+  - id: test
+    exec:
+      component: dev
+      commandLine: "./build/EchoServer"
