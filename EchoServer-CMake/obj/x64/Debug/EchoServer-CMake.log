@@ -1,0 +1,1 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Application Type\Linux\1.0\Linux.targets(158,5): error : 원격 빌드에 대해 구성된 원격 머신이 없습니다. [도구] | [옵션] | [플랫폼 간] | [연결 관리자]를 사용하여 머신을 구성하세요.

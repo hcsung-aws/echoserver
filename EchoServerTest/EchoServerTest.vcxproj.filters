@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\EchoServer\session.cpp">
+      <Filter>EchoServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EchoServer\sessionmanager.cpp">
+      <Filter>EchoServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EchoServer\packethandler.cpp">
+      <Filter>EchoServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EchoServer\server.cpp">
+      <Filter>EchoServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\EchoServer\packethandler.h">
+      <Filter>EchoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EchoServer\session.h">
+      <Filter>EchoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EchoServer\sessionmanager.h">
+      <Filter>EchoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EchoServer\packet.h">
+      <Filter>EchoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EchoServer\server.h">
+      <Filter>EchoServer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EchoServer">
+      <UniqueIdentifier>{409f1159-7fab-4847-b2c2-c16356906450}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
