@@ -5,7 +5,7 @@ Visual Studio Community 2017 -> 2022
 
 2. Dependencies:
 
-boost 1.67.0 with 64 bit multithread build
+boost 1.78.0 with 64 bit multithread build
 
 3. Directory structure:
 
