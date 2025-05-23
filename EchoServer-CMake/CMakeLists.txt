@@ -5,6 +5,12 @@ project(EchoServer)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Set Boost paths explicitly
+set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/boost_1_78_0")
+set(BOOST_INCLUDEDIR "${CMAKE_CURRENT_SOURCE_DIR}/boost_1_78_0")
+set(BOOST_LIBRARYDIR "${CMAKE_CURRENT_SOURCE_DIR}/boost_1_78_0/stage/lib")
+set(Boost_NO_SYSTEM_PATHS ON)
+
 # Find Boost
 find_package(Boost 1.78.0 REQUIRED COMPONENTS system thread)
 
@@ -12,6 +18,9 @@ find_package(Boost 1.78.0 REQUIRED COMPONENTS system thread)
 set(SOURCES
     EchoServer.cpp
     session.cpp    # Add this line to include session.cpp
+    packethandler.cpp
+    server.cpp
+    sessionmanager.cpp
 )
 
 # Create executable
@@ -29,5 +38,4 @@ target_link_libraries(${PROJECT_NAME}
     PRIVATE 
         Boost::system
         Boost::thread
-        pthread
 )

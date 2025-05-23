@@ -99,3 +99,5 @@ googlemock/gtest
 *.testdurations
 x64/Debug/EchoServerTest_2022.exe.gta.testdurations
 *.testdurations
+EchoServer-CMake.log
+/EchoServer-CMake/obj
