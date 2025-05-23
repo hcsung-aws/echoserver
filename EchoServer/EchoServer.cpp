@@ -70,6 +70,14 @@ int main(int argc, char* argv[])
 		// multi workerthread
 		std::thread thread1{ [&io_context]() { io_context.run(); } };
 		std::thread thread2{ [&io_context]() { io_context.run(); } };
+		std::thread thread3{ [&io_context]() { io_context.run(); } };
+		std::thread thread4{ [&io_context]() { io_context.run(); } };
+		std::thread thread5{ [&io_context]() { io_context.run(); } };
+		std::thread thread6{ [&io_context]() { io_context.run(); } };
+		std::thread thread7{ [&io_context]() { io_context.run(); } };
+		std::thread thread8{ [&io_context]() { io_context.run(); } };
+		std::thread thread9{ [&io_context]() { io_context.run(); } };
+		std::thread thread10{ [&io_context]() { io_context.run(); } };
 
 		// calc send count per second - not exactly but simple.
 		// if it has main logic thread, this function can be placed in there.
