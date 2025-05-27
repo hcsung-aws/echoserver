@@ -31,7 +31,7 @@ public:
 	std::shared_ptr<_SESSION> get_session(int session_idx) { return manager_.get_session(session_idx); }
 	size_t get_session_count() { return manager_.get_session_count(); }
 	void init_send_count_per_sec() { manager_.init_send_count_per_sec(); }
-	size_t get_send_count_per_sec() { return handler_.get_send_count_per_sec(); }
+	size_t get_send_count_per_sec() { return manager_.get_send_count_per_sec(); }
 	packethandler<_SESSION, _SESSIONMGR>& get_packethandler() { return handler_; }
 
 	// delete empty constructor & copy constructor(would like to use the class with RAII concept)

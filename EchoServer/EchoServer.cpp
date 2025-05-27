@@ -90,7 +90,7 @@ int main(int argc, char* argv[])
 				{
 					std::this_thread::sleep_for(std::chrono::seconds(1));
 					++log_count;
-					if (log_count % 5 == 0)
+					//if (log_count % 5 == 0)
 					{
 						auto now = std::chrono::system_clock::now();
 						auto now_c = std::chrono::system_clock::to_time_t(now);
@@ -99,11 +99,11 @@ int main(int argc, char* argv[])
 						//std::cout << "session count: " << simple_server.get_session_count() << ", send count per sec: " << simple_server.get_send_count_per_sec() << "\n";
 						std::cout << std::put_time(std::localtime(&now_c), "[%Y-%m-%d %H:%M:%S.")
 							<< std::setfill('0') << std::setw(3) << ms.count() << "] "
-							<< "session count: " << simple_server.get_session_count()
-							<< ", send count per sec: " << simple_server.get_send_count_per_sec() << "\n";
+							<< "session count: " << manager.get_session_count()
+							<< ", send count per sec: " << manager.get_send_count_per_sec() << "\n";
 					}
 
-					simple_server.init_send_count_per_sec();
+					manager.init_send_count_per_sec();
 				}
 			}
 		};
