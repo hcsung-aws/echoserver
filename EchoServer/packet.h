@@ -1,6 +1,6 @@
 #pragma once
 
-enum { max_message_length = 1024, max_packet_length = 2048, max_recv_buffer_size = 6000000 };
+enum { max_message_length = 50, max_packet_length = 2048, max_recv_buffer_size = 6000000 };
 
 enum packettype
 {
