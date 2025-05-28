@@ -80,6 +80,7 @@ public:
 	}
 
 	size_t get_send_count_per_sec() { return send_count_per_sec_; }
+	void increase_send_count_per_sec() { ++send_count_per_sec_; }
 
 	void release()
 	{

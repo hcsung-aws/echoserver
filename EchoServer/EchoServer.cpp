@@ -38,7 +38,8 @@ bool on_recv_echo(_T& manager, session* recv_session, packetheader* header)
 		return false;
 	}
 
-	manager.broadcast(packet);
+	recv_session->do_write(packet);
+	manager.increase_send_count_per_sec();
 
 	return true;
 }
@@ -78,6 +79,16 @@ int main(int argc, char* argv[])
 		std::thread thread8{ [&io_context]() { io_context.run(); } };
 		std::thread thread9{ [&io_context]() { io_context.run(); } };
 		std::thread thread10{ [&io_context]() { io_context.run(); } };
+		std::thread thread11{ [&io_context]() { io_context.run(); } };
+		std::thread thread12{ [&io_context]() { io_context.run(); } };
+		std::thread thread13{ [&io_context]() { io_context.run(); } };
+		std::thread thread14{ [&io_context]() { io_context.run(); } };
+		std::thread thread15{ [&io_context]() { io_context.run(); } };
+		std::thread thread16{ [&io_context]() { io_context.run(); } };
+		std::thread thread17{ [&io_context]() { io_context.run(); } };
+		std::thread thread18{ [&io_context]() { io_context.run(); } };
+		std::thread thread19{ [&io_context]() { io_context.run(); } };
+		std::thread thread20{ [&io_context]() { io_context.run(); } };
 
 		// calc send count per second - not exactly but simple.
 		// if it has main logic thread, this function can be placed in there.
@@ -115,6 +126,24 @@ int main(int argc, char* argv[])
 		}
 		thread1.join();
 		thread2.join();
+		thread3.join();
+		thread4.join();
+		thread5.join();
+		thread6.join();
+		thread7.join();
+		thread8.join();
+		thread9.join();
+		thread10.join();
+		thread11.join();
+		thread12.join();
+		thread13.join();
+		thread14.join();
+		thread15.join();
+		thread16.join();
+		thread17.join();
+		thread18.join();
+		thread19.join();
+		thread20.join();
 		thread_init_send_count.join();
 	}
 	catch (std::exception& e)
